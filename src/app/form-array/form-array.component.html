@@ -1,0 +1,15 @@
+<div class="container mt-4">
+
+  <button class="btn btn-primary mb-3" (click)="onInsertItem()">Insert Field</button>
+
+  <div class="item mb-3" *ngFor="let control of controls; let i = index">
+    <label class="form-label">Item: </label>
+    <input type="text"
+           class="form-control"
+           name="email"
+           [formControl]="control">
+
+    <button class="btn btn-danger" (click)="onDeleteItem(i)">Excluir</button>
+  </div>
+
+</div>
